@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    image: mongo:3
+    restart: always
+  backend:
+    build:
+      context: .
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    environment:
+      - MONGO_IP=db
+    command: bash -c 'while !</dev/tcp/db/27017; do sleep 1; done; node src/server.js'

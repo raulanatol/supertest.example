@@ -1,0 +1,16 @@
+node_modules
+integration_tests
+scripts
+Dockerfile
+.editorconfig
+.gitignore
+.dockerignore
+.eslintignore
+.eslintrc.json
+.git
+.idea
+.prettierrc
+LICENSE
+Makefile
+README.md
+docker-compose.yml
